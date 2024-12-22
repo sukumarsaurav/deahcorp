@@ -29,8 +29,9 @@ try {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Digital Agency - Your One-Stop Solution</title>
-        <link rel="stylesheet" href="assets/css/home.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/home.css">
+    </head>
     <body>
         <!-- Header -->
         <header class="header">
@@ -178,8 +179,16 @@ try {
             </div>
         </section>
 
-        <?php include 'includes/footer.php'; ?>
+        <footer class="footer">
+            <div class="container">
+                <!-- Footer content from test.html -->
+            </div>
+        </footer>
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- Scripts -->
         <script src="assets/js/main.js"></script>
     </body>
     </html>
