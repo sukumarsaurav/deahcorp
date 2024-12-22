@@ -1,22 +1,21 @@
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <!-- Company Info -->
-                <div class="footer-section">
-                    <h3 class="footer-title">DigitalAgency</h3>
-                    <p class="footer-description">Your trusted partner in digital transformation. We create innovative solutions that drive business growth.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>DigitalAgency</h3>
+                    <p>Your partner in digital success. We create innovative solutions that drive business growth.</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit">Subscribe</button>
+                        </form>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Quick Links</h4>
-                    <ul class="footer-links">
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
                         <li><a href="/pages/services.php">Services</a></li>
                         <li><a href="/pages/portfolio.php">Portfolio</a></li>
                         <li><a href="/pages/about.php">About Us</a></li>
@@ -24,39 +23,21 @@
                         <li><a href="/pages/contact.php">Contact</a></li>
                     </ul>
                 </div>
-
-                <!-- Services -->
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="/pages/services.php#web-design">Web Design</a></li>
-                        <li><a href="/pages/services.php#digital-marketing">Digital Marketing</a></li>
-                        <li><a href="/pages/services.php#branding">Branding</a></li>
-                        <li><a href="/pages/services.php#ui-ux">UI/UX Design</a></li>
-                        <li><a href="/pages/services.php#seo">SEO Services</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Contact Us</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Business Street<br>City, State 12345</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>(123) 456-7890</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>info@digitalagency.com</span>
-                        </li>
-                    </ul>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, City, State</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@digitalagency.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
                 <div class="copyright">
                     <p>&copy; <?php echo date('Y'); ?> DigitalAgency. All rights reserved.</p>
