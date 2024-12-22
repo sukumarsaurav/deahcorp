@@ -3,10 +3,24 @@
 require_once 'includes/error_handler.php';
 
 try {
-    require_once 'includes/db.php';
+    // Load configuration
+    require_once 'includes/Config.php';
+    Config::load();
+    
+    // Include database connection
+    require_once 'includes/Database.php';
+    $db = Database::getInstance();
+    $pdo = $db->getConnection();
     
     // Start output buffering to catch any errors
     ob_start();
+    
+    // Test database connection
+    try {
+        $stmt = $pdo->query("SELECT 1");
+    } catch (PDOException $e) {
+        throw new Exception("Database connection test failed: " . $e->getMessage());
+    }
     
     ?>
     <!DOCTYPE html>
@@ -104,12 +118,23 @@ try {
     
 } catch (Exception $e) {
     // Log the error
-    error_log("Critical error: " . $e->getMessage());
+    error_log("Critical error in index.php: " . $e->getMessage());
     
     // Clean the output buffer
-    ob_end_clean();
+    if (ob_get_level() > 0) {
+        ob_end_clean();
+    }
     
-    // Redirect to error page
-    header('Location: /error500.php');
+    // Show error based on environment
+    if (!Config::get('APP_ENV') === 'production') {
+        echo "<h1>Error Details</h1>";
+        echo "<p>Message: " . htmlspecialchars($e->getMessage()) . "</p>";
+        echo "<p>File: " . htmlspecialchars($e->getFile()) . "</p>";
+        echo "<p>Line: " . $e->getLine() . "</p>";
+        echo "<h2>Stack Trace:</h2>";
+        echo "<pre>" . htmlspecialchars($e->getTraceAsString()) . "</pre>";
+    } else {
+        header('Location: /error500.php');
+    }
     exit;
 } 
