@@ -1,0 +1,15 @@
+/* Blog page specific styles */
+.blog-content {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 3rem;
+}
+
+.blog-sidebar {
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 10px;
+}
+
+/* ... rest of blog page styles ... */ 

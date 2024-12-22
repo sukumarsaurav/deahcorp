@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle ?? 'Digital Agency'; ?> - Your One-Stop Solution</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <?php if (isset($pageStyle)): ?>
+    <link rel="stylesheet" href="/assets/css/<?php echo $pageStyle; ?>.css">
+    <?php endif; ?>
 </head>
 <body>
     <header class="header">

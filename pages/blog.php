@@ -33,6 +33,12 @@ $categories = $pdo->query("
 ")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+<head>
+    <!-- ... other meta tags ... -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+
 <section class="blog-hero">
     <div class="container">
         <h1>Blog</h1>

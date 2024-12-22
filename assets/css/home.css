@@ -1,0 +1,96 @@
+/* Home page specific styles */
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 8rem 0;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+/* Services Preview Section */
+.services {
+    padding: 5rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Portfolio Preview Section */
+.portfolio-preview {
+    padding: 5rem 0;
+    background: var(--light-bg);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Blog Preview Section */
+.blog-preview {
+    padding: 5rem 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Contact Preview Section */
+.contact-preview {
+    padding: 5rem 0;
+    background: var(--light-bg);
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-grid,
+    .portfolio-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: 6rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card,
+    .blog-card {
+        padding: 1.5rem;
+    }
+} 

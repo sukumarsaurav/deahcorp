@@ -1,0 +1,16 @@
+/* About page specific styles */
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+/* ... rest of about page styles ... */ 
