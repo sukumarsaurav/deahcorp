@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/db.php';
 $pageTitle = 'Contact Us';
+$pageStyle = 'contact';
 include '../includes/header.php';
 
 // Include form processor

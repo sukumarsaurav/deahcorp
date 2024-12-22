@@ -14,7 +14,9 @@
         <div class="container nav-container">
             <a href="/" class="logo">DigitalAgency</a>
             <nav>
-                <button class="menu-toggle">Menu</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="hamburger"></span>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/pages/services.php">Services</a></li>

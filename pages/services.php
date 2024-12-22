@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/db.php';
 $pageTitle = 'Our Services';
+$pageStyle = 'services';
 include '../includes/header.php';
 ?>
 

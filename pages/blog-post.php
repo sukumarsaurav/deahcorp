@@ -35,7 +35,8 @@ $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $stmt = $pdo->prepare("UPDATE blog_posts SET views = views + 1 WHERE id = ?");
 $stmt->execute([$post['id']]);
 
-$pageTitle = $post['title'];
+$pageTitle = 'Blog Post';
+$pageStyle = 'blog';
 include '../includes/header.php';
 ?>
 

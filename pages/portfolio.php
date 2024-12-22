@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/db.php';
-$pageTitle = 'Our Portfolio';
+$pageTitle = 'Portfolio';
+$pageStyle = 'portfolio';
 include '../includes/header.php';
 
 // Get category filter if set

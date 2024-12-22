@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/db.php';
 $pageTitle = 'Blog';
+$pageStyle = 'blog';
 include '../includes/header.php';
 
 // Pagination

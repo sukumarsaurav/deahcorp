@@ -15,7 +15,8 @@ if (!$project) {
     exit;
 }
 
-$pageTitle = $project['title'];
+$pageTitle = 'Portfolio Details';
+$pageStyle = 'portfolio';
 include '../includes/header.php';
 
 // Fetch project images
