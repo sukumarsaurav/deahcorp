@@ -1,11 +1,14 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/Config.php';
 
 try {
+    // Ensure config is loaded
+    Config::load();
+    
     $pdo = new PDO(
-        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME,
-        DB_USER,
-        DB_PASS,
+        "mysql:host=" . Config::get('DB_HOST') . ";dbname=" . Config::get('DB_NAME'),
+        Config::get('DB_USER'),
+        Config::get('DB_PASS'),
         array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
     );
 } catch(PDOException $e) {
