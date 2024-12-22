@@ -5,11 +5,6 @@ $pageStyle = 'about';
 include '../includes/header.php';
 ?>
 
-<head>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/about.css">
-</head>
-
 <section class="about-hero">
     <div class="container">
         <h1>About Us</h1>
