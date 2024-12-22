@@ -4,6 +4,9 @@ class Database {
     private $pdo;
     
     private function __construct() {
+        // Load configuration
+        Config::load('production'); // or get environment from somewhere
+        
         try {
             $this->pdo = new PDO(
                 "mysql:host=" . Config::get('DB_HOST') . 
@@ -19,7 +22,9 @@ class Database {
                 ]
             );
         } catch(PDOException $e) {
-            throw new Exception("Connection failed: " . $e->getMessage());
+            // Log error securely without exposing credentials
+            error_log("Database connection failed: " . $e->getMessage());
+            throw new Exception("Connection failed. Please try again later.");
         }
     }
     
