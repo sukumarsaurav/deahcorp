@@ -1,0 +1,25 @@
+# Enable custom error pages
+ErrorDocument 404 /error404.php
+ErrorDocument 500 /error500.php
+
+# PHP error handling
+php_flag display_errors off
+php_value error_reporting E_ALL
+php_value error_log logs/error.log
+
+# Protect error log
+<Files error.log>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch> 
